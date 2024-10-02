@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../assets/sass/Components/Carousel.scss";
-import arrowRight from "../assets/images/ArrowRight.svg";
-import arrowLeft from "../assets/images/ArrowLeft.svg";
+
 
 function Carousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,10 +33,10 @@ function Carousel({ pictures }) {
         className="carousel-image"
       />
       <button onClick={goToPrevSlide} className="carousel-button prev-button">
-        <img src={ArrowRight.svg} alt="Button précédent" />
+        <img src="ArrowRight.svg" alt="Button précédent" />
       </button>
       <button onClick={goToNextSlide} className="carousel-button next-button">
-        <img src={ArrowLeft.svg} alt="Button suivant" />
+        <img src="ArrowLeft.svg" alt="Button suivant" />
       </button>
       {pictures.length > 1 && (
         <div className="carousel-counter">
