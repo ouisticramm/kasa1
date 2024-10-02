@@ -1,0 +1,30 @@
+.collapsea_describeb {
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+  overflow: hidden;
+  p {
+    margin-block: 0;
+  }
+  .description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 0.7rem;
+  }
+  .img {
+    transform: scale(2);
+    cursor: pointer;
+  }
+  .about_describeb {
+    background-color: #f6f6f6;
+    color: #ff6060;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    position: relative;
+    top: -0.3rem;
+    z-index: -1;
+  }
+}

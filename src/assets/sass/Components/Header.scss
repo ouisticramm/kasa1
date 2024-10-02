@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: #ff6060;
+  font-weight: 400;
+  gap: 2rem;
+  @media screen and (width <=768px) {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  & > *:first-child {
+    margin-right: auto;
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

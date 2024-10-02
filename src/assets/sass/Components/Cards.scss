@@ -1,0 +1,67 @@
+@import "../mixins";
+@import "../variables";
+
+.grid {
+  background-color: $secondary-color;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 30px;
+  gap: 30px;
+  padding: 30px;
+  @include big-radius;
+
+  @media (max-width: $breakpoint-desktop) {
+    background-color: $tertiary-color;
+    padding: 0;
+    border-radius: 0;
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .location {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    @include small-radius;
+    min-height: 240px;
+    min-width: 240px;
+    overflow: hidden;
+    transition: transform 1s;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      &:hover,
+      &:focus {
+        @include boxShadow;
+      }
+    }
+
+    img {
+      @include WH-full;
+      object-fit: cover;
+      @include small-radius;
+      box-shadow: rgba($footer-color, 0.2) 0px 8px 24px;
+      filter: brightness(0.8);
+    }
+
+    .apartment_subtitle {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: $linear-cards;
+      color: $tertiary-color;
+      font-family: $font-family-primary;
+      font-weight: $font-medium;
+      font-size: 18px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: $breakpoint-desktop) {
+      width: 100%;
+    }
+  }
+}
